@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/rulesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Règles du jeu"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/rulesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#CCCCCC"
+            android:textSize="15sp"
+            android:text="🦖 Faites crier votre voix pour faire sauter le petit dino !\n\n🎯 Objectif : évitez les obstacles en criant ou faisant du bruit pour sauter au bon moment.\n\n💥 Si le dino touche un pilier ou sort de l’écran… c’est la fin !\n\n🏆 Plus vous passez de piliers, plus vous marquez de points. Tentez de battre votre record en criant avec stratégie !\n\n🎤 Astuce : la hauteur de votre cri détermine la force du saut. Contrôlez votre voix pour ajuster la trajectoire." />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/closeRulesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fermer"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

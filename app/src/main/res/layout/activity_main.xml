@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
         android:id="@+id/gameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,17 @@
             android:layout_marginBottom="400dp"
             android:scaleType="centerInside"
             android:src="@drawable/perso" />
-    </FrameLayout>
 
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="30dp" />
+
+    </FrameLayout>
 
 </FrameLayout>
