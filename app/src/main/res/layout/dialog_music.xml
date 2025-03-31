@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/musicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="🎵 Musique"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <ToggleButton
+        android:id="@+id/musicToggleButton"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:textOff="Activer la musique"
+        android:textOn="Désactiver la musique"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/closeMusicButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fermer"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

@@ -4,9 +4,13 @@ import android.Manifest
 import android.media.AudioFormat
 import android.media.AudioRecord
 import android.media.MediaRecorder
-import android.os.Handler
 import androidx.annotation.RequiresPermission
-import kotlin.math.max
+
+/*
+
+Gestion du microphone
+
+ */
 
 class MicrophoneListener(
     private val bufferSize: Int = AudioRecord.getMinBufferSize(

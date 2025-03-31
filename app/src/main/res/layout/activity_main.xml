@@ -1,34 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/gameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white">
+        android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/character"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="400dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/perso" />
+            android:id="@+id/backgroundScroll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_game_scroll" />
 
-        <TextView
-            android:id="@+id/scoreText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="24sp"
-            android:textColor="#000"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="30dp" />
+        <ImageView
+            android:id="@+id/backgroundScroll2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_game_scroll" />
 
+        <!-- Layout du jeu -->
+        <FrameLayout
+            android:id="@+id/gameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Dino -->
+            <ImageView
+                android:id="@+id/character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="400dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/perso" />
+
+            <!-- Score -->
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="30dp" />
+
+        </FrameLayout>
     </FrameLayout>
-
 </FrameLayout>

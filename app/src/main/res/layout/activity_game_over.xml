@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#F5F5F5">
+    android:padding="24dp"
+    android:background="@android:color/black">
 
     <TextView
         android:id="@+id/gameOverText"
@@ -12,14 +13,45 @@
         android:layout_height="wrap_content"
         android:text="Game Over!"
         android:textSize="32sp"
-        android:textColor="#D32F2F"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="#FF4081"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/currentScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/bestScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meilleur score : 0"
+        android:textSize="16sp"
+        android:textColor="#BBBBBB"
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:id="@+id/restartButton"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Restart"
+        android:text="🔁 Rejouer"
         android:textSize="18sp"
-        android:onClick="restartGame"/>
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/backToMenuButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="🏠 Menu principal"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button" />
 </LinearLayout>

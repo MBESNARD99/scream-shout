@@ -13,14 +13,19 @@
         android:theme="@style/Theme.ProjetKotlin">
 
         <!-- Page de Game Over -->
-        <activity android:name=".GameOverActivity" />
+        <activity android:name=".GameOverActivity"
+            android:screenOrientation="portrait"
+            />
 
         <!-- Page principale du jeu -->
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            />
 
         <!-- Page de bienvenue (page de démarrage) -->
         <activity
             android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,10 +1,16 @@
 package com.example.screamshout
 
 import android.content.Context
-import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
-import androidx.core.content.ContextCompat
+import android.widget.ImageView
+
+/*
+
+Crée deux piliers (haut et bas) avec un trou entre les deux,
+les ajoute au layout du jeu et à la liste des piliers.
+
+ */
 
 object PillarFactory {
 
@@ -16,26 +22,33 @@ object PillarFactory {
         pillars: MutableList<View>,
         onPillarsCreated: () -> Unit
     ) {
-        val pillarWidth = 100
-        val holeHeight = 700
-        val randomY = (layoutHeight - holeHeight).let { (0..it).random() }
+        val pillarWidth = 100 // Largeur fixe des piliers
+        val holeHeight = 700 // Taille de l'ouverture entre les deux piliers
+        val randomY = (layoutHeight - holeHeight).let { (0..it).random() } // Position Y aléatoire du haut du trou
 
-        val topPillar = View(context).apply {
-            setBackgroundColor(ContextCompat.getColor(context, android.R.color.holo_red_dark))
+        // Création du pilier haut
+        val topPillar = ImageView(context).apply {
+            setImageResource(R.drawable.pillar_top)
+            scaleType = ImageView.ScaleType.FIT_XY // Étirer la taille selon l'écran
             layoutParams = FrameLayout.LayoutParams(pillarWidth, randomY).apply {
-                leftMargin = layoutWidth
+                leftMargin = layoutWidth // Position horizontale (à droite de l'écran)
             }
             x = layoutWidth.toFloat()
             y = 0f
         }
 
-        val bottomPillar = View(context).apply {
-            setBackgroundColor(ContextCompat.getColor(context, android.R.color.holo_red_dark))
-            layoutParams = FrameLayout.LayoutParams(pillarWidth, layoutHeight - randomY - holeHeight).apply {
+        // Création du pilier bas
+        val bottomPillar = ImageView(context).apply {
+            setImageResource(R.drawable.pillar_bottom)
+            scaleType = ImageView.ScaleType.FIT_XY
+            layoutParams = FrameLayout.LayoutParams(
+                pillarWidth,
+                layoutHeight - randomY - holeHeight // Hauteur restante sous le trou
+            ).apply {
                 leftMargin = layoutWidth
             }
             x = layoutWidth.toFloat()
-            y = randomY + holeHeight.toFloat()
+            y = randomY + holeHeight.toFloat() // Position verticale après le trou
         }
 
         gameLayout.addView(topPillar)
